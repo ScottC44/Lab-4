@@ -40,10 +40,10 @@ public class ContactList {
     }
     public void loadContacts(String filename){
         try{
-            Scanner read = new Scanner(new File(filename));
-            listName = read.nextLine();
-            while(read.hasNext()){
-                String[] info = read.nextLine().split(",");
+            Scanner in = new Scanner(new File(filename));
+            listName = in.nextLine();
+            while(in.hasNext()){
+                String[] info = in.nextLine().split(",");
                 Client client = new Client(info[0], info[1], info[2], Integer.parseInt(info[3]), info[4], info[5]);
                 contacts.add(client);
             }
@@ -53,14 +53,14 @@ public class ContactList {
     }
     public void saveContacts(String filename){
         try{
-            PrintWriter pw = new PrintWriter(new File(filename));
-            pw.print(this.toString());
-            pw.close();
+            PrintWriter writer = new PrintWriter(new File(filename));
+            writer.print(this.toString());
+            writer.close();
         }catch(FileNotFoundException ex){
             System.out.println("File Could Not Be Written");
         }
     }
-    @Override
+
     public String toString(){
         String s = "";
         for(int i = 0; i < size(); i++){

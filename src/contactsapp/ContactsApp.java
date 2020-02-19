@@ -35,7 +35,7 @@ public class ContactsApp extends Application {
         launch(args);
         ContactList cl = new ContactList();
         cl.loadContacts("contacts.txt");
-        System.out.print(cl.toString());
+
     }
 
 }
