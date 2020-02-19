@@ -1,4 +1,9 @@
 package contactsmodel;
+/*
+Scott Cromling
+COMP167
+LAB4
+ */
 
 public class Client {
     private String firstname;
@@ -9,10 +14,10 @@ public class Client {
     private String email;
 
     public Client(){}
-    public Client(String firstname, String lastname, String gender, int age, String phone, String email){
-        this.firstname = firstname;
-        this.lastname = lastname;
-        this.gender = gender;
+    public Client(String fn, String ln, String gndr, int age, String phone, String email){
+        firstname = fn;
+        lastname = ln;
+        gender = gndr;
         this.age = age;
         this.phone = phone;
         this.email = email;

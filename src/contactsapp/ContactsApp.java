@@ -5,6 +5,7 @@
  */
 package contactsapp;
 
+import contactsmodel.ContactList;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -32,6 +33,9 @@ public class ContactsApp extends Application {
      */
     public static void main(String[] args) {
         launch(args);
+        ContactList cl = new ContactList();
+        cl.loadContacts("contacts.txt");
+        System.out.print(cl.toString());
     }
-    
+
 }
